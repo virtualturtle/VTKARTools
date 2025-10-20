@@ -15,7 +15,7 @@ solidify_mod = obj.modifiers.new(name="Solidify", type='SOLIDIFY')
 #solidify_mod.solidify_mode = 'SIMPLE'
 solidify_mod.thickness = 1.75
 
-# --- Step 2: Add Triangulate modifier ---
+# Add Triangulate modifier
 tri_mod = obj.modifiers.new(name="Triangulate", type='TRIANGULATE')
 
 # Apply both modifiers
@@ -43,5 +43,6 @@ mesh.update()
 bpy.context.view_layer.update()
 
 
-# --- Step 5: Rotate the object on X axis by -90 degrees ---
+# Rotate the object on X axis by -90 degrees
+
 obj.rotation_euler.rotate_axis('X', math.radians(-90))
