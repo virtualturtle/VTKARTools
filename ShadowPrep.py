@@ -25,10 +25,6 @@ bpy.ops.object.modifier_apply(modifier=tri_mod.name)
 
 mesh = obj.data
 
-# Ensure the mesh has custom split normals
-if not mesh.has_custom_normals:
-    mesh.create_normals_split()
-
 # Define the target normal direction (world +X)
 target_normal = mathutils.Vector((1.0, 0.0, 0.0))
 
@@ -41,7 +37,6 @@ mesh.normals_split_custom_set(custom_normals)
 # Update mesh and viewport
 mesh.update()
 bpy.context.view_layer.update()
-
 
 # Rotate the object on X axis by -90 degrees
 
