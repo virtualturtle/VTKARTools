@@ -34,4 +34,5 @@ for bone_name, pbone in target_rig.pose.bones.items():
 # Return to Object Mode
 bpy.ops.object.mode_set(mode='OBJECT')
 
-print("✅ All matching bones now have Copy Transforms constraints.")
+print("All matching bones now have Copy Transforms constraints.")
+
